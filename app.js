@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// Autre route d'exemple
+// Autre route d'exemple up
 app.get("/api", (req, res) => {
   res.json({ message: "API is working" });
 });
