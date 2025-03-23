@@ -34,8 +34,8 @@ jobs:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ env.SERVERHOST }}
-          username: ${{ env.SERVERUSER }}
-          port: ${{ env.SERVERPORT }}
+          host: ${{ vars.SERVERHOST }}
+          username: ${{ vars.SERVERUSER }}
+          port: ${{ vars.SERVERPORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: "bash  /home/antoine/apps/nodejs-ci-cd/deploy.sh"
