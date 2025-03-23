@@ -24,3 +24,18 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ env.SERVERHOST }}
+          username: ${{ env.SERVERUSER }}
+          port: ${{ env.SERVERPORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: "bash  /home/antoine/apps/nodejs-ci-cd/deploy.sh"
