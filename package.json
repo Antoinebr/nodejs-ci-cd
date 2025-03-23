@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-ci-cd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha test/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "mocha": "^11.1.0",
+    "supertest": "^7.1.0"
+  }
+}
