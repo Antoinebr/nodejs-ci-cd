@@ -24,9 +24,9 @@ describe("Integration Tests", () => {
 
   // test the /403 route it should return a 403 with a JSON response
   it("GET /403 should return 403 with JSON response", async () => {
-    const res = await request(app).get("/api");
+    const res = await request(app).get("/403");
     expect(res.status).to.equal(403);
-    expect(res.body).to.deep.equal({ message: "API is working" });
+    expect(res.body).to.deep.equal({ message: "You are not authorized here" });
   });
 
 
