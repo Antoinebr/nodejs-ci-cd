@@ -15,6 +15,6 @@ app.get("/api", (req, res) => {
 // 
 app.get("/403", (req, res) => {
     res.status(403).json({ message: "You are not authorized here" });
-  });
+});
 
 module.exports = app;
