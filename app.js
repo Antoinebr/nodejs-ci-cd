@@ -4,7 +4,7 @@ const app = express();
 
 // Route principale
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! ✅");
 });
 
 // Autre route d'exemple up

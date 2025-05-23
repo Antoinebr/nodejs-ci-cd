@@ -14,3 +14,5 @@ variables.env.now
 .sass-cache 
 
 # Project specific
+
+*.draft.md
